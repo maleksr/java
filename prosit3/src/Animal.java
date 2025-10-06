@@ -1,8 +1,10 @@
+package entites;
+
 public class Animal {
-    String family;
-    String name;
-    int age;
-    boolean isMammal;
+    private String family;
+    private String name;
+    private int age;
+    private boolean isMammal;
 
 
     public Animal(String family, String name, int age, boolean isMammal) {
@@ -13,7 +15,7 @@ public class Animal {
     }
 
     public String toString() {
-        return "Animal [Nom = " + name +
+        return "entites.Animal [Nom = " + name +
                 ", Famille = " + family +
                 ", Âge = " + age +
                 ", Mammifère = " + isMammal + "]";

@@ -1,7 +1,9 @@
+package entites;
+
 public class Zoo {
-    private static final int MAX_CAGES = 25;
+    static final int MAX_CAGES = 25;
     Animal[] animals = new Animal[MAX_CAGES];
-    String name;
+    public String name;
     String city;
     int nbrCages;
     int animalCount = 0;
@@ -13,7 +15,7 @@ public class Zoo {
     }
 
     public void displayZoo() {
-        System.out.println("Nom du Zoo : " + name);
+        System.out.println("Nom du entites.Zoo : " + name);
         System.out.println("Ville : " + city);
         System.out.println("Nombre de cages : " + nbrCages);
         System.out.println("Nombre d’animaux : " + animalCount);
@@ -21,7 +23,7 @@ public class Zoo {
 
     @Override
     public String toString() {
-        return "Zoo [Nom = " + name +
+        return "entites.Zoo [Nom = " + name +
                 ", Ville = " + city +
                 ", Nombre de cages = " + nbrCages +
                 ", Animaux présents = " + animalCount + "]";
@@ -33,13 +35,13 @@ public class Zoo {
             System.out.println("Aucun animal dans le zoo.");
         } else {
             for (int i = 0; i < animalCount; i++) {
-                System.out.println("Animal " + (i + 1) + ": " + animals[i]);
+                System.out.println("entites.Animal " + (i + 1) + ": " + animals[i]);
             }
         }
     }
 
 
-    int searchAnimal(String animalName) {
+    public int searchAnimal(String animalName) {
         for (int i = 0; i < animalCount; i++) {
             if (animalName.equalsIgnoreCase(animals[i].name)) {
                 return i;
